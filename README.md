@@ -1,6 +1,6 @@
 # summary-api
 
-A full-stack FastAPI-based web service for summarizing long-form content (articles, PDFs, transcripts) using OpenAI GPT-4. Stores both the input and summary in a Postgres database.
+A full-stack FastAPI-based web service for summarizing long-form content (articles, PDFs, transcripts) using OpenAI GPT-3.5-turbo. Stores both the input and summary in a Postgres database.
 
 ## Features
 - Summarizes long-form content into concise bullet points using GPT-4
