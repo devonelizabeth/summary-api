@@ -33,15 +33,34 @@ Docs: http://localhost:8000/docs
   ```json
   { "content": "long text here", "source": "string describing source (e.g., URL, title, etc.)" }
   ```
+- **Response:** (202 Accepted)
+  ```json
+  { "task_id": "uuid-string" }
+  ```
+
+### GET /tasks/{task_id}
 - **Response:**
   ```json
-  { "summary": "...", "id": "...", "created_at": "..." }
+  {
+    "id": "uuid-string",
+    "status": "PENDING | PROCESSING | COMPLETED | FAILED",
+    "result_id": "id of the summary (if completed)",
+    "error": "error message (if failed)",
+    "created_at": "timestamp",
+    "updated_at": "timestamp"
+  }
   ```
 
 ### GET /summaries/{id}
 - **Response:**
   ```json
-  { "id": "...", "content": "...", "summary": "...", "source": "...", "created_at": "..." }
+  { 
+    "id": "...", 
+    "content": "...", 
+    "summary": "...", 
+    "source": "...", 
+    "created_at": "..." 
+  }
   ```
 
 ## Environment Variables
