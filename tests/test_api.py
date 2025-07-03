@@ -9,12 +9,10 @@ async def test_post_summarize(mock_summarize):
     mock_summarize.return_value = "• Bullet 1\n• Bullet 2"
     async with AsyncClient(app=app, base_url="http://test") as ac:
         resp = await ac.post("/summarize", json={"content": "Long text", "source": "test-source"})
-        assert resp.status_code == 200
+        assert resp.status_code == 202
         data = resp.json()
-        assert "summary" in data
-        assert data["summary"].startswith("•")
-        assert "id" in data
-        assert "created_at" in data
+        assert "task_id" in data
+        assert isinstance(data["task_id"], str)
 
 @pytest.mark.asyncio
 @patch('app.db.get_summary_by_id', new_callable=AsyncMock)
