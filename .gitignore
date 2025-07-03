@@ -1,0 +1,84 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual Environment
+venv/
+env/
+ENV/
+.env
+.venv
+.python-version
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.project
+.pydevproject
+.settings
+
+# Testing
+.pytest_cache/
+.coverage
+coverage.xml
+htmlcov/
+.tox/
+nosetests.xml
+coverage/
+
+# Database
+*.sqlite3
+*.db
+postgres-data/
+
+# Logs
+*.log
+logs/
+log/
+
+# Docker
+.docker/
+docker-compose.override.yml
+
+# FastAPI
+.fastapi_cache/
+
+# OS
+.DS_Store
+Thumbs.db
+*.bak
+*.tmp
+*.temp
+
+# Project specific
+summaries/
+uploads/
+downloads/
+temp/
+.env.*
+!.env.example 
+
+# Ignore github workflow for now
+.github/workflows/deploy.yml
