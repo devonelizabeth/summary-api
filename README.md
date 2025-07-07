@@ -8,6 +8,8 @@ A full-stack FastAPI-based web service for summarizing long-form content (articl
 - REST API with OpenAPI docs
 - Async SQLAlchemy + Postgres
 - Dockerized for easy deployment
+
+### Upcoming Features 
 - GitHub Actions CI/CD for Google Cloud Run
 
 ## Summarization Prompt
